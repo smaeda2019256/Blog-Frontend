@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Box , TextField, Button, styled, Typography} from "@mui/material";
+import { signupUser } from "../../../../Backend/src/auth/auth.controller";
 
 const Component = styled(Box)`
     width: 480px;
@@ -62,6 +63,10 @@ const Login = () => {
         setSignup( ...signup, [e.target.name], e.target.value)
     }
 
+    const signupUser = () => {
+        
+    }
+
     return(
         <Component>
             <Box>
@@ -83,7 +88,7 @@ const Login = () => {
                             <TextField variant="standard" onChange={(e) => onInputChange(e)} name= 'username' label='Enter your username'/>
                             <TextField variant="standard" onChange={(e) => onInputChange(e)} name= 'password' label='Enter your password'/>
                     
-                            <SignupButton>Signup</SignupButton>
+                            <SignupButton onClick={() => signupUser()}>Signup</SignupButton>
                             <Typography style={{textAlign:'center'}}>OR</Typography>
                             <LoginButton variant="contained" onClick={() => toggleSignup()}>Already have an account</LoginButton>
                         </Wrapper>
