@@ -47,7 +47,7 @@ const Navbar = () => {
             <Container >
                 {/* principal Menu */}
                 <Toolbar disableGutters>
-                    <HouseIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <HouseIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -59,7 +59,7 @@ const Navbar = () => {
                             fontFamily: 'monospace',
                             fontSize: "30px",
                             fontWeight: 700,
-                            letterSpacing: '.3rem',
+                            letterSpacing: '.1rem',
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
@@ -122,13 +122,14 @@ const Navbar = () => {
                     >
                         BLOG
                     </Typography>
+                    
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {/* menu desktop */}
 
                         <Typography
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block', mr: 2 }}>
-                            <Link to="/" style={{ color: 'white', textDecoration: "none", fontSize:"23px"}}>
+                            <Link to="/" style={{ color: 'white', textDecoration: "none", fontSize:"21px"}}>
                                 Home
                             </Link>
                         </Typography>
@@ -136,21 +137,41 @@ const Navbar = () => {
                         <Typography
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}>
-                            <Link to="/register" style={{ color: 'white', textDecoration: "none", fontSize:"23px" }}>
+                            <Link to="/register" style={{ color: 'white', textDecoration: "none", fontSize:"21px" }}>
                                 Register
                             </Link>
                         </Typography>
-
-
+                    </Box>
+                    <Box>
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="a"
+                        href="/"
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'none', md: 'flex' },
+                            fontFamily: 'monospace',
+                            fontSize: "18px",
+                            fontWeight: 700,
+                            letterSpacing: '.1rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        El Diario Del Programador
+                    </Typography>
                     </Box>
 
 
                     <Box sx={{ flexGrow: 0 }}>
+                        
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 <Avatar alt="Remy Sharp" src="" />
                             </IconButton>
                         </Tooltip>
+                        
                         <Menu
                             PaperProps={{
                                 sx: {
